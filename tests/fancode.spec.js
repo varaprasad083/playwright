@@ -52,29 +52,6 @@ test("instagram", async({page})=>{
 
 })
 
-test("todo", async({page})=>{
-
-    await page.goto("https://demo.playwright.dev/todomvc/#/")
-
-    const newTodo = page.getByPlaceholder('What needs to be done?');
-
-    // Create 1st todo.
-   
-
-     await page.fill("input[placeholder='What needs to be done?']","today session is dismissed ")
-     await newTodo.press('Enter');
-
-     await page.fill("input[placeholder='What needs to be done?']","today is sunday ")
-     await newTodo.press('Enter');
-
-     
-
-     await page.fill("input[placeholder='What needs to be done?']","today is monday ")
-     await newTodo.press('Enter');
-
-     await page.click("(//button[@aria-label='Delete'])[2]")
-
-})
 
 
 test("flipkart", async({page})=>{
