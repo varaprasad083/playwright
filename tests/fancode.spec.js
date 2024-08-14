@@ -54,25 +54,25 @@ test("instagram", async({page})=>{
 
 
 
-test("flipkart", async({page})=>{
+// test("flipkart", async({page})=>{
 
-    await page.goto("https://www.flipkart.com/");
+//     await page.goto("https://www.flipkart.com/");
 
-    // await expect(page).toHaveTitle("Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!")
+//     // await expect(page).toHaveTitle("Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!")
 
-    await page.click('text=Login');
+//     await page.click('text=Login');
 
-    // await page.fill("input[type='text']","vara2@gmail.com")
-    await page.fill("input[class='r4vIwl BV+Dqf']","vara2@gmail.com")
+//     // await page.fill("input[type='text']","vara2@gmail.com")
+//     await page.fill("input[class='r4vIwl BV+Dqf']","vara2@gmail.com")
 
-   await page.getByRole("button",{name:'Request OTP'}).click()
+//    await page.getByRole("button",{name:'Request OTP'}).click()
 
-    await page.waitForTimeout(5000)
+//     await page.waitForTimeout(5000)
     
  
 
 
-})
+// })
 
 // test('stock items 5', async ({page}) => {
 //   await page.goto("");
