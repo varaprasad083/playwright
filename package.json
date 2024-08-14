@@ -2,7 +2,9 @@
   "name": "playwrigit",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+"scripts": {
+  "merge-reports": "playwright merge-reports --reporter html ./blob-report"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
