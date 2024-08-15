@@ -74,10 +74,4 @@ test("instagram", async({page})=>{
 
 // })
 
-// test('stock items 5', async ({page}) => {
-//   await page.goto("");
-//   await expect(page.getByRole("listitem")
-//     .filter({ hasNotText: 'Out of stock' }))
-//     .toHaveCount(5)
-// });
 
