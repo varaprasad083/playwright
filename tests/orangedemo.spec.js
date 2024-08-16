@@ -3,19 +3,22 @@ const {test, expect}=require("@playwright/test");
 test.beforeEach("OrangeHRM", async({page})=>{
 
     await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+    
+    await page.waitForTimeout(2000)
     await  expect(page).toHaveTitle("OrangeHRM")
     await page.getByPlaceholder("Username").fill("Admin")
     await page.getByPlaceholder("Password").fill("admin123")
     await page.getByRole("button", {name:'Login'}).click()
     
-    await page.waitForTimeout(2000)
     
 })
 
 test("OrangeHRM assignLeave", async({page})=>{
     await page.locator("button[title='Assign Leave']").click()
-    await page.getByPlaceholder("Type for hints...").fill("Rahul")
-    await page.getByRole('option',{name:'Rahul Das'}).first().click()
+    await page.getByPlaceholder('Type for hints...').fill('vara');
+    await page.waitForTimeout(3000)
+    await page.getByRole('option', { name: 'vara Prasad Saragada' }).click();
+
     await page.locator('form i').first().click();
     await page.getByRole('option', { name: 'CAN - Personal' }).click();
     await page.locator('form i').nth(2).click();
@@ -38,8 +41,8 @@ test("OrangeHRM Admin",async({page})=>{
     await page.locator("div[class='oxd-input-group oxd-input-field-bottom-space'] div input[class='oxd-input oxd-input--active']").fill('Admin');
     await page.locator('form i').first().click()
     await page.getByRole('option',{name:'Admin'}).click()
-    await page.getByPlaceholder('Type for hints...').fill('Raju')
-    await page.getByRole('option',{name:'Raju  G'}).first().click()
+    await page.getByPlaceholder('Type for hints...').fill('an');
+    await page.getByText('aniket Ashok patil').click();
     await page.locator('form i').nth(1).click()
     await page.getByRole('option',{name:'Enabled'}).click()
     await page.getByRole('button',{name:'Search'}).click()
