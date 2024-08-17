@@ -21,7 +21,7 @@ test("OrangeHRM assignLeave", async({page})=>{
     await page.locator('form i').nth(2).click();
     await page.getByText('16').click();
     await page.locator('form i').nth(3).click();
-    await page.getByText('20', { exact: true }).click();
+    await page.getByText('21').click();
     await page.locator('form i').nth(4).click();
     await page.getByRole('option',{name:'End Day Only'}).click()
     await page.locator('form i').nth(5).click();
@@ -39,14 +39,13 @@ test("OrangeHRM Recuirment",async({page})=>{
     await page.locator('form i').nth(1).click();
     await page.getByRole('option', { name: 'QA lead' }).click();
     await page.locator('form i').nth(2).click();
-    await page.getByRole('option', { name: 'manda user' }).click();
     await page.locator('form i').nth(3).click();
     await page.getByRole('option', { name: 'Application Initiated' }).click();
     await page.getByPlaceholder('Enter comma seperated words...').fill('nothing is better');
     await page.locator('.oxd-date-input > .oxd-icon').first().click();
     await page.getByText('19').click();
     await page.locator('.oxd-date-input > .oxd-icon').nth(1).click();
-    await page.getByText('22').click();
+    await page.getByText('21').click();
     await page.locator('div:nth-child(3) > .oxd-grid-4 > .oxd-grid-item > .oxd-input-group > div:nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text--after > .oxd-icon').click();
     await page.getByRole('option', { name: 'Manual' }).click();
     await page.getByRole('button', { name: 'Search' }).click();
