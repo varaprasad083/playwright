@@ -44,7 +44,7 @@ test("OrangeHRM Recuirment",async({page})=>{
     await page.getByPlaceholder('Enter comma seperated words...').fill('nothing is better');
     await page.locator('.oxd-date-input > .oxd-icon').first().click();
     await page.getByText('19').click();
-    await page.locator('.oxd-date-input > .oxd-icon').nth(1).click();
+    await page.locator('form i').nth(5).click();
     await page.getByText('21').click();
     await page.locator('div:nth-child(3) > .oxd-grid-4 > .oxd-grid-item > .oxd-input-group > div:nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text--after > .oxd-icon').click();
     await page.getByRole('option', { name: 'Manual' }).click();
